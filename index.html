@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator JS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #808080;
+        }
+
+        #calculator {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .viewCalc {
+            width: 240px;
+            margin: 5px;
+            padding: 8px;
+            font-size: 24px;
+            border: none;
+        }
+
+        button {
+            margin: 2px;
+            border: none;
+            background: #56a79a;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #000;
+        }
+
+        .view-item {
+            display: grid;
+            grid-template-columns: 1fr, 1fr, 1fr;
+            grid-template-rows: 1fr, 1fr, 1fr;
+        }
+
+        .item-1 {
+            grid-column: 1;
+            grid-row: 1;
+        }
+        
+        .item-2 {
+            grid-column: 2;
+            grid-row: 1;
+        }
+        
+        .item-3 {
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+        .item-4 {
+            grid-column: 1;
+            grid-row: 2;
+        }
+        
+        .item-5 {
+            grid-column: 2;
+            grid-row: 2;
+        }
+        
+        .item-6 {
+            grid-column: 3;
+            grid-row: 2;
+        }
+        
+        .item-7 {
+            grid-column: 1;
+            grid-row: 3;
+        }
+        
+        .item-8 {
+            grid-column: 2;
+            grid-row: 3;
+        }
+        
+        .item-9 {
+            grid-column: 3;
+            grid-row: 3;
+        }
+
+        #history {
+            position: absolute;
+            width: 400px;
+            height: 100%;
+            background: #000;
+            color: #fff;
+            overflow: auto;
+        }
+
+        #history h3 {
+            padding: 15px;
+            font-size: 2em;
+        }
+        
+        #history p {
+            margin-left: 15px;
+            font-size: 1.5em;
+        }
+
+        .result {
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="main">
+        <div id="calculator">
+            <input type="text" class="viewCalc" name="viewCalc" id="viewCalc">
+            <div class="view-item">
+                <button data-item="0" class="item-0">0</button>
+                <button data-item="1" class="item-1">1</button>
+                <button data-item="2" class="item-2">2</button>
+                <button data-item="3" class="item-3">3</button>
+                <button data-item="4" class="item-4">4</button>
+                <button data-item="5" class="item-5">5</button>
+                <button data-item="6" class="item-6">6</button>
+                <button data-item="7" class="item-7">7</button>
+                <button data-item="8" class="item-8">8</button>
+                <button data-item="9" class="item-9">9</button>
+                <button data-item="*" class="item-mul">*</button>
+                <button data-item="/" class="item-div">/</button>
+                <button data-item="+" class="item-add">+</button>
+                <button data-item="-" class="item-sub">-</button>
+                <button class="submitBtn" id="submitBtn" type="submit">=</button>
+            </div>
+        </div>
+        <div id="history">
+            <h3>History :</h3>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>
